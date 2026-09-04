@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects — Hassan Mujtaba</title>
+  <meta name="description" content="Selected front-end projects by Hassan Mujtaba, covering accessible interfaces, semantic markup and web performance.">
+  <meta name="author" content="Hassan Mujtaba">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b5ed7">
+  <link rel="canonical" href="https://hassanmujtaba.example.com/projects.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Hassan Mujtaba">
+  <meta property="og:title" content="Projects — Hassan Mujtaba">
+  <meta property="og:description" content="Selected front-end projects by Hassan Mujtaba, covering accessible interfaces, semantic markup and web performance.">
+  <meta property="og:url" content="https://hassanmujtaba.example.com/projects.html">
+  <meta property="og:image" content="https://hassanmujtaba.example.com/assets/images/og-image.jpg">
+  <meta property="og:image:alt" content="Portrait of Hassan Mujtaba beside his name and job title.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Projects — Hassan Mujtaba">
+  <meta name="twitter:description" content="Selected front-end projects by Hassan Mujtaba, covering accessible interfaces, semantic markup and web performance.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">Hassan Mujtaba</a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" aria-current="page">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section aria-labelledby="projects-heading">
+      <div class="wrap">
+        <h1 id="projects-heading">Projects</h1>
+        <p class="lead">A selection of work focused on accessibility, semantic structure and performance.</p>
+
+        <article class="card" id="accessible-dashboard" aria-labelledby="ad-h">
+          <h2 id="ad-h">Accessible Dashboard UI</h2>
+          <ul class="tags"><li>HTML5</li><li>ARIA</li><li>CSS Grid</li></ul>
+          <p>An analytics dashboard rebuilt from a div-heavy prototype into landmark-based semantic regions. Charts expose accessible data tables, asynchronous updates are announced through polite live regions, and every control is reachable in a logical tab order.</p>
+          <p><strong>Outcome:</strong> Lighthouse Accessibility 100, zero axe DevTools violations.</p>
+        </article>
+
+        <article class="card" id="semantic-blog" aria-labelledby="sb-h">
+          <h2 id="sb-h">Semantic Blog Engine</h2>
+          <ul class="tags"><li>Static site</li><li>SEO</li><li>JSON-LD</li></ul>
+          <p>A static generator that emits article markup with correct heading hierarchy, canonical URLs, Open Graph tags and Article structured data. Output pages ship no client-side JavaScript by default.</p>
+          <p><strong>Outcome:</strong> Lighthouse SEO 100 across all generated pages.</p>
+        </article>
+
+        <article class="card" id="form-validation" aria-labelledby="fv-h">
+          <h2 id="fv-h">Form Validation Library</h2>
+          <ul class="tags"><li>JavaScript</li><li>a11y</li><li>Zero deps</li></ul>
+          <p>A dependency-free helper that layers on the native Constraint Validation API. Errors are linked to inputs with <code>aria-describedby</code>, flagged with <code>aria-invalid</code> and announced through an assertive live region, and focus moves to the first invalid field on submit.</p>
+          <p><strong>Outcome:</strong> Under 3&nbsp;KB gzipped, fully keyboard and screen-reader tested.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026 Hassan Mujtaba. All rights reserved.</p>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
