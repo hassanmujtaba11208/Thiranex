@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Hassan Mujtaba</title>
+  <meta name="description" content="Projects by Hassan Mujtaba spanning full-stack development, AI-assisted tooling, mobile apps, and cloud infrastructure." />
+  <meta name="author" content="Hassan Mujtaba" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Projects — Hassan Mujtaba" />
+  <meta property="og:description" content="Full-stack, AI, and cloud projects built by Hassan Mujtaba." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourdomain.com/projects.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">HM</span>
+        Hassan Mujtaba
+      </a>
+
+      <ul class="nav-links" data-nav-links>
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="about.html">About</a></li>
+        <li><a class="nav-link" href="about.html#skills">Skills</a></li>
+        <li><a class="nav-link" href="projects.html">Projects</a></li>
+        <li><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Switch to dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.3M12 19.2v2.3M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.3M19.2 12h2.3M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"></path></svg>
+        </button>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="primary-navigation" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="page-header">
+      <div class="container section-head reveal">
+        <span class="section-kicker">Projects</span>
+        <h1>Coursework and self-directed builds</h1>
+        <p>Six projects covering full-stack platforms, AI-assisted tooling, a mobile app, and cloud infrastructure.</p>
+      </div>
+    </section>
+
+    <section class="projects">
+      <div class="container">
+        <div class="filter-row reveal" role="group" aria-label="Filter projects by category">
+          <button class="filter-btn" data-filter="all" aria-pressed="true" type="button">All</button>
+          <button class="filter-btn" data-filter="fullstack" aria-pressed="false" type="button">Full-Stack</button>
+          <button class="filter-btn" data-filter="ai" aria-pressed="false" type="button">AI</button>
+          <button class="filter-btn" data-filter="mobile" aria-pressed="false" type="button">Mobile</button>
+          <button class="filter-btn" data-filter="cloud" aria-pressed="false" type="button">Cloud</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- 1 -->
+          <article class="project-card reveal" data-category="fullstack">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 9v11"/></svg>
+            </div>
+            <span class="project-category">Full-Stack · AI</span>
+            <h3>AI Powered BabyPaws Care</h3>
+            <p>A full-stack software project focused on connecting caregivers with owner-side management, role-based workflows, and AI/OCR-assisted functionality.</p>
+            <div class="project-tags">
+              <span class="tag">Django</span>
+              <span class="tag">Django REST Framework</span>
+              <span class="tag">React</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">AI/OCR</span>
+            </div>
+            <a class="project-link is-disabled" aria-disabled="true" title="Not publicly deployed">
+              View Project
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+
+          <!-- 2 -->
+          <article class="project-card reveal" data-category="ai">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6z"/></svg>
+            </div>
+            <span class="project-category">Security · AI</span>
+            <h3>SecureCode Scanner X</h3>
+            <p>An AI-assisted source-code security analysis platform performing static analysis, OWASP/CWE mapping, risk scoring, and PDF reporting of findings.</p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Security Analysis</span>
+            </div>
+            <a class="project-link is-disabled" aria-disabled="true" title="Not publicly deployed">
+              View Project
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+
+          <!-- 3 -->
+          <article class="project-card reveal" data-category="ai">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h18M3 12h18M3 7h18"/></svg>
+            </div>
+            <span class="project-category">Cloud · FastAPI</span>
+            <h3>Insurance Claims Intelligence</h3>
+            <p>An intelligent insurance claims processing platform using OCR and AI-assisted insight generation, with fraud-detection signals and a review dashboard.</p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">OCR</span>
+              <span class="tag">AI</span>
+            </div>
+            <a class="project-link is-disabled" aria-disabled="true" title="Not publicly deployed">
+              View Project
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+
+          <!-- 4 -->
+          <article class="project-card reveal" data-category="fullstack">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M8 14h3"/></svg>
+            </div>
+            <span class="project-category">Full-Stack · Enterprise</span>
+            <h3>Enterprise Asset Lifecycle &amp; Maintenance Platform</h3>
+            <p>An enterprise asset and maintenance management platform handling asset tracking, work orders, maintenance requests, technician management, and role-based access.</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Express</span>
+              <span class="tag">MySQL</span>
+            </div>
+            <a class="project-link is-disabled" aria-disabled="true" title="Not publicly deployed">
+              View Project
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+
+          <!-- 5 -->
+          <article class="project-card reveal" data-category="mobile">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+            </div>
+            <span class="project-category">Mobile</span>
+            <h3>Secure Notes Manager</h3>
+            <p>A mobile application for managing private notes, using secure local storage so entries stay on the device rather than a remote server.</p>
+            <div class="project-tags">
+              <span class="tag">Flutter</span>
+              <span class="tag">Dart</span>
+              <span class="tag">Hive</span>
+              <span class="tag">Android</span>
+            </div>
+            <a class="project-link is-disabled" aria-disabled="true" title="Not publicly deployed">
+              View Project
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+
+          <!-- 6 -->
+          <article class="project-card reveal" data-category="cloud">
+            <div class="project-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 000-9 6 6 0 00-11.4-1.5A4.5 4.5 0 007 19h10.5z"/></svg>
+            </div>
+            <span class="project-category">Cloud Infrastructure</span>
+            <h3>AWS Cloud Portfolio</h3>
+            <p>A cloud deployment project demonstrating hosting and infrastructure fundamentals using EC2 compute, S3 storage, and an Apache web server.</p>
+            <div class="project-tags">
+              <span class="tag">AWS</span>
+              <span class="tag">EC2</span>
+              <span class="tag">S3</span>
+              <span class="tag">Apache</span>
+            </div>
+            <a class="project-link is-disabled" aria-disabled="true" title="Not publicly deployed">
+              View Project
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <span class="brand-mark">HM</span>
+            Hassan Mujtaba
+          </div>
+          <p>Software Engineering Student · Full-Stack Developer · AI &amp; Cloud Enthusiast</p>
+          <div class="footer-social" style="margin-top:1.2rem;">
+            <a class="social-icon" href="https://github.com/your-profile" aria-label="GitHub profile" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 00-3.79 23.39c.6.11.82-.26.82-.58v-2.02c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.49 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.53.12-3.19 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.89.12 3.19.77.84 1.23 1.91 1.23 3.22 0 4.61-2.8 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.83.58A12 12 0 0012 .5z"/></svg>
+            </a>
+            <a class="social-icon" href="https://linkedin.com/in/your-profile" aria-label="LinkedIn profile" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM.5 8.75h4.96V23H.5V8.75zM8.5 8.75h4.75v1.95h.07c.66-1.24 2.28-2.55 4.7-2.55 5.03 0 5.96 3.3 5.96 7.6V23h-4.96v-6.35c0-1.51-.03-3.46-2.11-3.46-2.11 0-2.44 1.65-2.44 3.35V23H8.5V8.75z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <nav aria-label="Footer navigation">
+          <h3 class="footer-heading">Navigate</h3>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </nav>
+
+        <div>
+          <h3 class="footer-heading">Focus</h3>
+          <div class="footer-links">
+            <span>Full-Stack Development</span>
+            <span>AI-Assisted Systems</span>
+            <span>Cloud Deployment</span>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer-heading">Location</h3>
+          <div class="footer-links">
+            <span>Karachi, Pakistan</span>
+            <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span data-current-year>2026</span> Hassan Mujtaba. All rights reserved.</span>
+        <span>Built with HTML5, CSS3 &amp; JavaScript</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
