@@ -1,0 +1,111 @@
+==================================================================
+PROJECT REPORT
+==================================================================
+
+PROJECT TITLE
+--------------
+TaskFlow Pro – Smart To-Do Manager
+
+
+OBJECTIVE
+--------------
+To design and develop a fully functional, responsive, and visually
+professional to-do list web application using only front-end web
+technologies (HTML5, CSS3, and vanilla JavaScript), demonstrating
+proficiency in DOM manipulation, client-side state management,
+browser storage, responsive design, and accessible UI development,
+without relying on any external framework or backend service.
+
+
+PROBLEM STATEMENT
+--------------
+Many students and professionals need a lightweight, distraction-free
+way to track daily tasks without installing software, creating
+accounts, or depending on an internet connection. Most existing
+to-do apps either require a backend/database, pull in heavy
+frontend frameworks, or present cluttered, generic interfaces.
+
+This project addresses that gap by building a task manager that:
+  - requires no installation, account, or server;
+  - runs entirely in the browser using client-side storage;
+  - presents a modern, uncluttered, and professional interface;
+  - remains fast, accessible, and fully responsive across devices.
+
+
+FEATURES
+--------------
+1. Create, read, update, and delete tasks (full CRUD)
+2. Input validation with inline error messaging
+3. Mark tasks as completed / active, with animated status changes
+4. Inline task editing with save/cancel controls
+5. Confirmation dialogs before destructive actions (delete,
+   clear completed, delete all, mark all completed)
+6. Filter tasks by All / Active / Completed
+7. Real-time, case-insensitive search across task titles
+8. Live statistics dashboard (total, active, completed, % done)
+   with an animated progress ring
+9. Automatic persistence via localStorage; tasks survive page
+   refreshes and browser restarts
+10. Light/dark theme toggle
+11. Toast notifications for user feedback on every action
+12. Fully responsive layout (mobile, tablet, laptop, desktop)
+13. Accessibility support: semantic HTML, labelled form controls,
+    visible keyboard focus states, aria-live regions, and
+    reduced-motion handling
+
+
+TECHNOLOGIES USED
+--------------
+- HTML5            : semantic page structure
+- CSS3              : custom properties (design tokens), Flexbox,
+                       CSS Grid, media queries, glassmorphism effects,
+                       keyframe animations
+- JavaScript (ES6+) : arrow functions, template literals, array
+                       methods (map/filter/find), event delegation,
+                       Promise-based confirmation modal, IIFE module
+                       pattern for encapsulation
+- Web Storage API   : window.localStorage for persistence
+- Google Fonts      : Sora (display typeface) and Inter (body
+                       typeface)
+
+No external JavaScript frameworks or CSS libraries (no React, Vue,
+jQuery, or Bootstrap) were used, in line with the project brief.
+
+
+LEARNING OUTCOMES
+--------------
+Through building this project, the following skills were practiced
+and reinforced:
+
+  - Structuring a multi-file front-end project without a build tool
+  - Managing application state in plain JavaScript and keeping the
+    UI in sync with that state via a single render() function
+  - Using event delegation to efficiently handle dynamically
+    generated DOM elements (task list items)
+  - Persisting and rehydrating structured data using the Web
+    Storage API, including error handling for storage failures
+  - Designing a cohesive visual identity (color tokens, typography
+    scale, spacing system) and implementing it consistently in CSS
+  - Building fully responsive layouts using Flexbox and CSS Grid
+    with mobile-first breakpoints
+  - Implementing accessible interaction patterns: keyboard support,
+    focus management, ARIA live regions, and reduced-motion queries
+  - Writing maintainable, well-commented, modular JavaScript using
+    the IIFE pattern to avoid polluting the global namespace
+
+
+CONCLUSION
+--------------
+TaskFlow Pro successfully demonstrates that a polished, production-
+quality web application can be built using only core web
+technologies. The project fulfills all functional requirements —
+full task CRUD, status management, filtering, search, statistics,
+bulk actions, and persistent local storage — while also meeting
+non-functional goals of responsiveness, accessibility, and visual
+professionalism. The resulting codebase is modular, commented, and
+structured for easy extension, making it a solid foundation for
+future enhancements such as cloud sync or multi-list support.
+
+==================================================================
+END OF REPORT
+==================================================================

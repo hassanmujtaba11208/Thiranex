@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow Pro – Smart To-Do Manager</title>
+  <meta name="description" content="TaskFlow Pro: a modern, local-first task manager built with vanilla HTML, CSS and JavaScript." />
+
+  <!-- Google Fonts: Sora for display, Inter for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Inline SVG favicon: a simple checkmark mark -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%236C5CE7'/%3E%3Cpath d='M28 52 L44 68 L74 34' stroke='white' stroke-width='10' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <!-- ============ BACKGROUND DECORATION ============ -->
+  <div class="bg-aurora" aria-hidden="true"></div>
+
+  <div class="app-shell">
+
+    <!-- ============ HEADER ============ -->
+    <header class="app-header">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+            <path d="M4 12.5L9.5 18L20 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <div class="brand-text">
+          <h1>TaskFlow <span>Pro</span></h1>
+          <p class="tagline">Smart To-Do Manager</p>
+        </div>
+      </div>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle light and dark theme" title="Toggle theme">
+        <svg id="iconMoon" viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      </button>
+    </header>
+
+    <!-- ============ STATISTICS DASHBOARD ============ -->
+    <section class="stats-grid" aria-label="Task statistics">
+      <div class="stat-card">
+        <span class="stat-value" id="statTotal">0</span>
+        <span class="stat-label">Total</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value" id="statActive">0</span>
+        <span class="stat-label">Active</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-value" id="statCompleted">0</span>
+        <span class="stat-label">Completed</span>
+      </div>
+      <div class="stat-card stat-card--progress">
+        <div class="progress-ring-wrap">
+          <svg viewBox="0 0 44 44" width="44" height="44" class="progress-ring">
+            <circle cx="22" cy="22" r="18" class="progress-ring__bg" />
+            <circle cx="22" cy="22" r="18" class="progress-ring__fg" id="progressRing" />
+          </svg>
+          <span class="progress-ring__text" id="statPercent">0%</span>
+        </div>
+        <span class="stat-label">Done</span>
+      </div>
+    </section>
+
+    <!-- ============ TASK INPUT AREA ============ -->
+    <section class="task-input-card" aria-label="Add a new task">
+      <form id="taskForm" class="task-form" novalidate>
+        <label for="taskInput" class="visually-hidden">New task</label>
+        <input
+          type="text"
+          id="taskInput"
+          class="task-input"
+          placeholder="What needs to get done?"
+          autocomplete="off"
+          maxlength="120"
+        />
+        <button type="submit" class="btn btn--primary" id="addBtn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+          <span>Add task</span>
+        </button>
+      </form>
+      <p class="input-error" id="inputError" role="alert"></p>
+    </section>
+
+    <!-- ============ SEARCH + FILTERS ============ -->
+    <section class="controls-bar" aria-label="Search and filter tasks">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" class="search-icon"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <label for="searchInput" class="visually-hidden">Search tasks</label>
+        <input type="text" id="searchInput" placeholder="Search tasks…" autocomplete="off" />
+      </div>
+
+      <div class="filter-tabs" role="tablist" aria-label="Filter tasks">
+        <button class="filter-tab is-active" data-filter="all" role="tab" aria-selected="true" type="button">All</button>
+        <button class="filter-tab" data-filter="active" role="tab" aria-selected="false" type="button">Active</button>
+        <button class="filter-tab" data-filter="completed" role="tab" aria-selected="false" type="button">Completed</button>
+      </div>
+    </section>
+
+    <!-- ============ TASK LIST SECTION ============ -->
+    <section class="task-list-card" aria-label="Task list">
+      <ul id="taskList" class="task-list"></ul>
+
+      <div class="empty-state" id="emptyState">
+        <svg viewBox="0 0 24 24" width="40" height="40" fill="none"><path d="M9 11l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><rect x="3" y="4" width="18" height="17" rx="3" stroke="currentColor" stroke-width="1.6"/></svg>
+        <p id="emptyStateText">No tasks yet. Add your first task above to get started.</p>
+      </div>
+    </section>
+
+    <!-- ============ BULK ACTIONS ============ -->
+    <section class="bulk-actions" aria-label="Bulk actions">
+      <button class="btn btn--ghost" id="markAllBtn" type="button">Mark all completed</button>
+      <button class="btn btn--ghost" id="clearCompletedBtn" type="button">Clear completed</button>
+      <button class="btn btn--danger-ghost" id="deleteAllBtn" type="button">Delete all</button>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="app-footer">
+      <p>TaskFlow Pro &middot; Built with HTML, CSS &amp; JavaScript &middot; Data stored locally in your browser</p>
+    </footer>
+
+  </div>
+
+  <!-- ============ CONFIRMATION MODAL (reused for all confirmations) ============ -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal">
+      <h2 id="modalTitle">Are you sure?</h2>
+      <p id="modalMessage">This action cannot be undone.</p>
+      <div class="modal-actions">
+        <button class="btn btn--ghost" id="modalCancelBtn" type="button">Cancel</button>
+        <button class="btn btn--danger" id="modalConfirmBtn" type="button">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ TOAST NOTIFICATION ============ -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
